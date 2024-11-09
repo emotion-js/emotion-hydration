@@ -18,5 +18,5 @@ On top of this, if we remove the suspense boundary, all the errors dissapear. So
 
 ## What is the fix?
 
-I noticed that if I wrap the `ChakraProvider` inside an emotion `CacheProvider` it solves the issue (see `layout.tsx`). BUT, that has some additional side-effects, and when trying the same method in other apps with actual components and logic, it produces FOUTs...
+I noticed that if I wrap the `ThemeProvider` inside an emotion `CacheProvider` it solves the issue (see `layout.tsx`). BUT, that has some additional side-effects, and when trying the same method in other apps with actual components and logic, it produces FOUTs...
 

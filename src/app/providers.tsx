@@ -2,22 +2,22 @@
 'use client'
 
 import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
+import { CacheProvider, ThemeProvider } from '@emotion/react';
+import { theme } from './theme';
 
-import { ChakraProvider } from '@chakra-ui/react'
 
 const cache = createCache({ key: 'css' });
 
 function RegularProviders({ children }: { children: React.ReactNode }) {
   return (
-    <ChakraProvider>{children}</ChakraProvider>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   )
 }
 
 function WithCacheProviders({ children }: { children: React.ReactNode }) {
   return (
     <CacheProvider value={cache}>
-      <ChakraProvider>{children}</ChakraProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </CacheProvider>
   )
 }

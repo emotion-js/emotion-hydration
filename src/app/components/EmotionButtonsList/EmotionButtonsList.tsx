@@ -16,8 +16,9 @@ const EmotionButtonsList = ({ names }: { names: string[] }) => {
   )
 }
 
+
 const EmotionButton = styled.button`
-    background: purple;
+    background: ${(props) => props.theme.colors.primary};
     color: #fff;
     padding: 0.5rem;
 `;
